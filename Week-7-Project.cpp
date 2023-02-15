@@ -5,7 +5,7 @@
 
 using namespace std;
 
-//Does error checking for the fileName - If they are any of those characters then the file wont be made
+//Does error checking for the fileName - If they are any of those characters then the file won't be made
 bool StringErrorCheck(string fileName)
 {
     int fileNameLen = fileName.length();
@@ -51,6 +51,7 @@ int main()
     //Opening the file with the fileName
     outFile.open(fileName);
     
+    //Setting up a while function to repeat inputs if there is an error
     while(true)
     {
         cout << "Enter the check amount : ";
@@ -69,14 +70,21 @@ int main()
         cin >> numInParty;
         cout << endl;
         
+        //Due to being put into a FailState, it will skip to the last input and set it to 0
+        //If the last input is 0, then it has been put into a fail state and needs to be reset.
         if(numInParty == 0)
         {
             cout << "Make sure to enter the correct values" << endl;
+            
+            //Clears the input stream
             cin.clear();
+            
+            //Ignores the rest of the input
             cin.ignore(200, '\n');
         }
         else
         {
+            //If no error can be found, then it will break out of the while loop and continue
             break;
         }
     }
