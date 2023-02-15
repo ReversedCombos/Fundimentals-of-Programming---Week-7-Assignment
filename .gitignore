@@ -1,0 +1,5 @@
+#Ignore all but Week-7-Project.cpp
+X64/
+Week-7-Project.vcxproj
+Week-7-Project.vcxproj.filters
+Week-7-Project.vcxproj.user
