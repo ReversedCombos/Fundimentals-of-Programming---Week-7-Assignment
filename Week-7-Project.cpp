@@ -20,11 +20,23 @@ bool StringErrorCheck(string fileName)
     return true;
 }
 
+bool inputCheck(int input)
+{
+    if(isdigit(input) != 0)
+    {
+        return false;
+    }
+    return true;
+}
+
 int main()
 {
     //Varables
     string fileName;
-
+    double checkAmount;
+    double tipAmount;
+    double taxRate;
+    int numInParty;
 
     //Setting up the outFile refrence
     ofstream outFile;
