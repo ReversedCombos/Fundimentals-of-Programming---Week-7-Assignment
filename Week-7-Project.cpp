@@ -76,7 +76,7 @@ int main()
         {
             cout << "Make sure to enter the correct values" << endl;
             
-            //Clears the input stream
+            //Clears the input stream of the fail state
             cin.clear();
             
             //Ignores the rest of the input
